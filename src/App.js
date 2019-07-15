@@ -1,25 +1,29 @@
 import React from 'react';
 import logo from './logo.svg';
-import './App.css';
+import './App.scss';
+import Title from "./Title";
+import Map from "./Map";
+import Button from '@material/react-button';
+import './App.scss';
+import Card from "@material/react-card";
+import MyApp from "./MyApp";
+import styled from 'styled-components';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Map/>
+      <Button
+          raised
+          className='button-alternate'
+          onClick={() => console.log('clicked!')}
+      >
+        Click Me!
+      </Button>
+      <Card />
+      <MyApp/>
     </div>
+
   );
 }
 
